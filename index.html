@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dott. Marco Ugolotti - Fisioterapista a Genova. Professionalità, empatia e cura personalizzata per il tuo benessere. 5.0 stelle - 70 recensioni.">
-    <title>Dott. Marco Ugolotti, JSCC - Fisioterapista Genova</title>
+    <meta name="description" content="Dott. Marco Ugolotti - Fisioterapista a Genova. Specializzato in Strain Counterstrain (SCS). Professionalità, empatia e cura personalizzata. 5.0 stelle - 70 recensioni.">
+    <title>Dott. Marco Ugolotti, JSCC - Strain Counterstrain - Fisioterapista Genova</title>
     <style>
         * {
             margin: 0;
@@ -86,10 +86,26 @@
             align-items: center;
         }
 
+        /* Logo Image */
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             font-size: 1.25rem;
             font-weight: 600;
             color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .header-phone {
@@ -390,6 +406,280 @@
         .highlight-item p {
             font-size: 0.95rem;
             color: var(--text-light);
+        }
+
+        /* PRIMARY TECHNIQUE SECTION - Strain Counterstrain */
+        .technique-section {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+            border-left: 6px solid var(--primary-color);
+        }
+
+        .technique-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .technique-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .technique-content h2 {
+            text-align: left;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .technique-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .technique-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .technique-benefits li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .technique-benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .technique-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .technique-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(44, 95, 125, 0.2);
+            object-fit: cover;
+        }
+
+        .technique-cta {
+            margin-top: 2.5rem;
+        }
+
+        /* ENHANCED REVIEWS SECTION */
+        .reviews-badge-highlight {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+            border: 2px solid #ffa500;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .reviews-stars-large {
+            font-size: 1.8rem;
+            color: #ffa500;
+            letter-spacing: 4px;
+        }
+
+        .reviews-badge-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .reviews-score {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .reviews-count {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ SECTION - ACCORDION */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 1.5rem;
+            background: var(--background);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--light-bg);
+        }
+
+        .faq-question.active {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            color: var(--accent-color);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* LOCATION & ACCESSIBILITY SECTION */
+        .accessibility-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .accessibility-item {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        .accessibility-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
+        }
+
+        .accessibility-item p {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .accessibility-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accessibility-item li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .accessibility-item li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .opening-hours {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+        }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background: var(--background);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .hours-day {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .hours-time {
+            color: var(--primary-color);
+            font-weight: 500;
         }
 
         /* Studio Section */
@@ -753,6 +1043,14 @@
                 font-size: 1.75rem;
             }
 
+            .logo-text {
+                display: none;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
             .hero {
                 padding: 3rem 0 2.5rem;
             }
@@ -776,6 +1074,47 @@
 
             .hero-intro {
                 font-size: 1rem;
+            }
+
+            /* Technique section responsive */
+            .technique-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .technique-content h2 {
+                text-align: center;
+                font-size: 1.75rem;
+            }
+
+            .technique-content {
+                text-align: center;
+            }
+
+            .technique-benefits {
+                text-align: left;
+            }
+
+            .technique-cta {
+                text-align: center;
+            }
+
+            /* Reviews responsive */
+            .reviews-badge-highlight {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            /* Accessibility grid responsive */
+            .accessibility-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* FAQ responsive */
+            .faq-question {
+                font-size: 0.95rem;
+                padding: 1.25rem;
             }
 
             section {
@@ -867,15 +1206,23 @@
     </style>
 </head>
 <body>
+    <!-- DEMO BANNER - Remove this in production -->
     <div style="background:#f5f7f9;padding:6px;text-align:center;font-size:13px;color:#6c7a89;">
 Demo dimostrativo di sito web realizzato come esempio.
 </div>
 
-    <!-- Header -->
+    <!-- ================================ -->
+    <!-- HEADER - Logo & Phone Contact   -->
+    <!-- ================================ -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Dott. Marco Ugolotti, JSCC</div>
+                <!-- Logo and Practice Name -->
+                <div class="logo">
+                    <img src="logo.png" alt="Dott. Marco Ugolotti Logo">
+                    <span class="logo-text">Dott. Marco Ugolotti</span>
+                </div>
+                <!-- Phone Call Button -->
                 <a href="tel:+393478145532" class="header-phone">
                     <span>📞</span> 347 814 5532
                 </a>
@@ -883,7 +1230,11 @@ Demo dimostrativo di sito web realizzato come esempio.
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ================================ -->
+    <!-- HERO SECTION                     -->
+    <!-- Main introduction with image     -->
+    <!-- Update: main_profile image       -->
+    <!-- ================================ -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -891,6 +1242,7 @@ Demo dimostrativo di sito web realizzato come esempio.
                     <h1>Dott. Marco Ugolotti, JSCC</h1>
                     <p class="hero-subtitle">Fisioterapista a Genova</p>
                     
+                    <!-- Google Reviews Badge -->
                     <div class="rating-badge">
                         <span class="stars">★★★★★</span>
                         <span class="rating-text">5.0</span>
@@ -898,8 +1250,8 @@ Demo dimostrativo di sito web realizzato come esempio.
                     </div>
 
                     <p class="hero-intro">
-                        Professionalità, empatia e attenzione personalizzata per il tuo benessere. 
-                        Un approccio umano e competente per aiutarti a stare meglio.
+                        Specializzato in tecniche avanzate di Medicina Manuale Osteopatica. 
+                        Professionalità, empatia e attenzione personalizzata per il tuo benessere.
                     </p>
 
                     <div class="cta-group">
@@ -912,26 +1264,91 @@ Demo dimostrativo di sito web realizzato come esempio.
                     </div>
                 </div>
 
+                <!-- Hero Image -->
                 <div class="hero-image">
-                    <img src="image.webp" alt="Dott. Marco Ugolotti - Fisioterapista">
+                    <img src="main_profile.jpg" alt="Dott. Marco Ugolotti - Fisioterapista Genova">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quando Rivolgerti Section -->
+    <!-- ================================ -->
+    <!-- PRIMARY TECHNIQUE SECTION       -->
+    <!-- STRAIN COUNTERSTRAIN (SCS)      -->
+    <!-- ** MAIN FOCUS OF THE WEBSITE ** -->
+    <!-- Positioned after hero for max   -->
+    <!-- visibility. Edit text in the    -->
+    <!-- .technique-content div          -->
+    <!-- ================================ -->
+    <section class="technique-section" id="strain-counterstrain">
+        <div class="container">
+            <div class="section-header">
+                <h2>La Mia Specialità: Strain Counterstrain</h2>
+            </div>
+            
+            <div class="technique-wrapper">
+                <div class="technique-content">
+                    <span class="technique-badge">Certificazione Internazionale JSCC</span>
+                    
+                    <h2>Un Approccio Rivoluzionario al Dolore Cronico</h2>
+                    
+                    <p>
+                        La tecnica <strong>Strain Counterstrain (SCS)</strong> è il mio punto di forza. 
+                        È un approccio manuale osteopatico passivo, indolore e ad alta precisione che agisce direttamente sul sistema nervoso.
+                    </p>
+                    
+                    <p>
+                        <strong>In soli 90 secondi</strong>, attraverso il posizionamento specifico del corpo in posizioni di massimo comfort, 
+                        disattiviamo i "tender points" (punti di tensione) che causano disfunzioni neuromuscolari e dolori cronici.
+                    </p>
+                    
+                    <h3 style="font-size: 1.15rem; margin-top: 2rem; margin-bottom: 1rem;">Come Funziona:</h3>
+                    <ul class="technique-benefits">
+                        <li>Rilascio indolore dei tender points</li>
+                        <li>Resetta il riflesso neuromuscolare "bloccato"</li>
+                        <li>Ripristina la vascolarizzazione del tessuto</li>
+                        <li>Migliora la circolazione linfatica</li>
+                        <li>Risultati immediati senza manovre brusche</li>
+                    </ul>
+                    
+                    <p style="margin-top: 2rem; font-style: italic; color: var(--primary-color);">
+                        Molti dolori cronici non sono causati da lesioni strutturali, ma da disfunzioni neuromuscolari. 
+                        Lo Strain Counterstrain le risolve in modo naturale.
+                    </p>
+                    
+                    <div class="technique-cta">
+                        <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20saperne%20di%20più%20sulla%20tecnica%20Strain%20Counterstrain." class="btn btn-primary">
+                            <span>💬</span> Scopri di Più
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Technique Image -->
+                <div class="technique-image">
+                    <img src="image2.webp" alt="Tecnica Strain Counterstrain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- WHEN TO SEE PHYSIOTHERAPIST     -->
+    <!-- Lists common problems treatable -->
+    <!-- by Strain Counterstrain         -->
+    <!-- ================================ -->
     <section class="quando-rivolgerti">
         <div class="container">
             <h2>Quando Rivolgerti al Fisioterapista</h2>
             <p>
-                Se avverti uno di questi problemi, una valutazione fisioterapica può aiutarti a capire la causa e trovare il trattamento più adatto.
+                Se avverti uno di questi problemi, lo Strain Counterstrain potrebbe essere il trattamento che stai cercando:
             </p>
             
             <ul>
-                <li>Hai dolore alla schiena?</li>
-                <li>Dolore cervicale o rigidità al collo?</li>
-                <li>Problemi alla spalla o al ginocchio?</li>
-                <li>Dolori muscolari persistenti o tensioni?</li>
+                <li>Dolore cronico alla schiena o cervicale</li>
+                <li>Problemi alla spalla, gomito, ginocchio</li>
+                <li>Dolori muscolari persistenti e tensioni</li>
+                <li>Limitazioni del movimento o rigidità articolare</li>
+                <li>Disfunzioni posturali e problemi infiammatori</li>
             </ul>
             
             <p class="closing-text">
@@ -939,57 +1356,73 @@ Demo dimostrativo di sito web realizzato come esempio.
             </p>
             
             <div class="cta-button">
-                <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20prenotare%20una%20visita." class="btn btn-primary">
-                    <span>💬</span> Prenota una visita su WhatsApp
+                <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20prenotare%20una%20valutazione." class="btn btn-primary">
+                    <span>💬</span> Prenota una Valutazione su WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ================================ -->
+    <!-- ABOUT SECTION - CHI SONO        -->
+    <!-- Professional bio & background   -->
+    <!-- Edit bio text and highlights    -->
+    <!-- Update image: image2.webp       -->
+    <!-- ================================ -->
     <section id="chi-sono">
         <div class="container">
             <div class="section-header">
                 <h2>Chi Sono</h2>
-                <p class="section-subtitle">Un professionista al servizio della tua salute</p>
+                <p class="section-subtitle">Oltre 30 anni di esperienza e passione per la medicina manuale</p>
             </div>
             <div class="about-wrapper">
                 <div class="about-image">
-                    <img src="image2.webp" alt="Dott. Marco Ugolotti">
+                    <img src="image2.webp" alt="Dott. Marco Ugolotti - Fisioterapista">
                 </div>
                 <div class="about-content">
                     <p>
-                        Mi chiamo <strong>Marco Ugolotti</strong> e lavoro come fisioterapista a Genova. 
-                        Il mio obiettivo è aiutare i pazienti a recuperare il benessere attraverso trattamenti manuali mirati e un'attenzione personalizzata.
+                        Mi chiamo <strong>Marco Ugolotti</strong> e lavoro come fisioterapista a Genova da più di 30 anni. 
+                        La mia specialità è la <strong>Medicina Manuale Osteopatica</strong>, con certificazione internazionale in 
+                        <strong>Strain Counterstrain (JSCC)</strong>.
                     </p>
                     <p>
-                        Credo nell'importanza dell'ascolto e della collaborazione con il paziente per trovare il percorso terapeutico più efficace. 
-                        Ogni trattamento è pensato in base alle esigenze specifiche della persona.
+                        Il mio obiettivo è aiutare i pazienti a recuperare il benessere attraverso trattamenti manuali mirati, 
+                        precisi e completamente personalizzati. Creo un ambiente di fiducia dove l'ascolto e la collaborazione 
+                        con il paziente sono fondamentali per trovare il percorso terapeutico più efficace.
+                    </p>
+                    <p>
+                        Credo che ogni persona meriti un approccio umano e competente, quindi ogni trattamento è pensato 
+                        in base alle esigenze specifiche e alla storia clinica del paziente.
                     </p>
                 </div>
             </div>
 
+            <!-- Highlights -->
             <div class="about-highlights">
                 <div class="highlight-item">
-                    <div class="highlight-icon">👤</div>
-                    <h4>Approccio Personale</h4>
-                    <p>Ogni paziente è unico e riceve un trattamento su misura</p>
+                    <div class="highlight-icon">🎓</div>
+                    <h4>30+ Anni di Esperienza</h4>
+                    <p>Competenza clinica consolidata in medicina manuale osteopatica e fisioterapia</p>
                 </div>
                 <div class="highlight-item">
-                    <div class="highlight-icon">🎓</div>
-                    <h4>Professionalità</h4>
-                    <p>Competenza e aggiornamento continuo</p>
+                    <div class="highlight-icon">🏆</div>
+                    <h4>Certificazione Internazionale JSCC</h4>
+                    <p>Specializzato in Strain Counterstrain – tecnica riconosciuta a livello mondiale</p>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-icon">❤️</div>
-                    <h4>Empatia e Cura</h4>
-                    <p>Un ambiente accogliente e rassicurante</p>
+                    <h4>Approccio Personalizzato</h4>
+                    <p>Ogni paziente è unico e riceve un trattamento su misura delle sue esigenze</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Studio Section -->
+    <!-- ================================ -->
+    <!-- STUDIO SECTION - GALLERY        -->
+    <!-- Studio photos & environment     -->
+    <!-- Update images: image3, image4   -->
+    <!-- ================================ -->
     <section id="studio">
         <div class="container">
             <div class="section-header">
@@ -1013,28 +1446,25 @@ Demo dimostrativo di sito web realizzato come esempio.
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- ================================ -->
+    <!-- SERVICES SECTION - REDUCED      -->
+    <!-- Purposefully less prominent     -->
+    <!-- Primary Technique is the focus  -->
+    <!-- Supports SCS with complementary -->
+    <!-- treatments (TECAR, Laser, etc)  -->
+    <!-- Edit service list here          -->
+    <!-- ================================ -->
     <section id="trattamenti">
         <div class="container">
             <div class="section-header">
-                <h2>Trattamenti</h2>
-                <p class="section-subtitle">Servizi professionali per il tuo recupero e benessere</p>
+                <h2>I Miei Trattamenti</h2>
+                <p class="section-subtitle">Oltre allo Strain Counterstrain, offro una gamma completa di servizi</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🩺</div>
-                    <h3>Fisioterapia</h3>
-                    <p>Trattamenti manuali e riabilitativi personalizzati per recuperare la funzionalità e ridurre il dolore.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Tecarterapia</h3>
-                    <p>Terapia strumentale avanzata per il trattamento di traumi, infiammazioni e dolori muscolari.</p>
-                </div>
-                <div class="service-card">
                     <div class="service-icon">🦴</div>
-                    <h3>Trattamento Cervicale</h3>
-                    <p>Cura specifica per problematiche cervicali, tensioni e dolori al collo.</p>
+                    <h3>Trattamenti Vertebrali</h3>
+                    <p>Cura specifica per problematiche della colonna vertebrale e disfunzioni meccaniche.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏃</div>
@@ -1042,30 +1472,34 @@ Demo dimostrativo di sito web realizzato come esempio.
                     <p>Programmi di recupero post-traumatico e post-operatorio per tornare alle attività quotidiane.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💧</div>
-                    <h3>Linfodrenaggio</h3>
-                    <p>Tecnica manuale delicata per favorire il drenaggio linfatico e ridurre gonfiori.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🙌</div>
-                    <h3>Massoterapia</h3>
-                    <p>Massaggi terapeutici per rilassare la muscolatura e alleviare tensioni.</p>
-                </div>
-                <div class="service-card">
                     <div class="service-icon">💪</div>
-                    <h3>Trattamento Miofasciale</h3>
-                    <p>Tecniche manuali per il trattamento dei dolori muscolari e delle rigidità fasciali.</p>
+                    <h3>Gestione Dolore Cronico</h3>
+                    <p>Trattamenti mirati per risolvere disfunzioni articolari e dolori muscolari persistenti.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Tecarterapia</h3>
+                    <p>Terapia strumentale avanzata per traumi, infiammazioni e dolori muscolari.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎯</div>
-                    <h3>Problemi alla Spalla</h3>
-                    <p>Trattamenti specifici per dolori, limitazioni e patologie della spalla.</p>
+                    <h3>Laserterapia</h3>
+                    <p>Terapia laser per supportare i processi di guarigione e ridurre l'infiammazione.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Rieducazione Posturale</h3>
+                    <p>Programmi personalizzati per migliorare la postura e prevenire problemi futuri.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Section -->
+    <!-- ================================ -->
+    <!-- WHY CHOOSE SECTION              -->
+    <!-- Key differentiators & benefits  -->
+    <!-- Edit icons and text             -->
+    <!-- ================================ -->
     <section id="perche">
         <div class="container">
             <div class="section-header">
@@ -1097,24 +1531,46 @@ Demo dimostrativo di sito web realizzato come esempio.
         </div>
     </section>
 
-    <!-- Reviews Section -->
+    <!-- ================================ -->
+    <!-- REVIEWS SECTION - ENHANCED      -->
+    <!-- ** HIGHLY VISIBLE **            -->
+    <!-- Google reviews with large       -->
+    <!-- badge highlight + testimonials  -->
+    <!-- Edit testimonials in cards      -->
+    <!-- ================================ -->
     <section id="recensioni">
         <div class="container">
             <div class="section-header">
                 <h2>Cosa Dicono i Pazienti</h2>
             </div>
+            
+            <!-- Enhanced Google Reviews Badge -->
+            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <div class="reviews-badge-highlight">
+                    <div>
+                        <div class="reviews-stars-large">★★★★★</div>
+                    </div>
+                    <div class="reviews-badge-text">
+                        <div class="reviews-score">5.0</div>
+                        <div class="reviews-count">70 Recensioni Google</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="reviews-intro">
                 <p>
-                    I pazienti apprezzano soprattutto la competenza nel trattamento, l'attenzione durante le sedute e i risultati concreti ottenuti.
+                    I pazienti apprezzano soprattutto la competenza nel trattamento, l'attenzione personalizzata durante le sedute, 
+                    i risultati concreti e l'approccio umano e rassicurante.
                 </p>
             </div>
 
+            <!-- Testimonials Grid -->
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-quote">"</div>
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
-                        Professionista serio e competente. Mi ha aiutato a risolvere un problema alla spalla che mi accompagnava da tempo. Consigliatissimo.
+                        Professionista serio e competente. Mi ha aiutato a risolvere un problema alla spalla che mi accompagnava da anni. Consigliatissimo.
                     </p>
                     <p class="testimonial-author">— Paziente verificato</p>
                 </div>
@@ -1130,32 +1586,41 @@ Demo dimostrativo di sito web realizzato come esempio.
                     <div class="testimonial-quote">"</div>
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
-                        Ottimo fisioterapista, ti mette subito a tuo agio. Ho avuto sollievo fin dalle prime sedute. Lo consiglio vivamente.
+                        Ottimo fisioterapista, ti mette subito a tuo agio. Ho avuto sollievo fin dalle prime sedute. Lo consiglio fortemente.
                     </p>
                     <p class="testimonial-author">— Paziente verificato</p>
                 </div>
             </div>
 
+            <!-- CTA for Google Reviews -->
             <div class="google-reviews-cta">
-                <p><strong>70 recensioni con valutazione 5.0 stelle su Google</strong></p>
-                <a href="https://www.google.com/search?q=Dott.+Marco+Ugolotti+Genova" target="_blank" class="btn btn-outline">
-                    Leggi Tutte le Recensioni
+                <p><strong>Leggi tutte le 70 recensioni su Google</strong></p>
+                <a href="https://www.google.com/search?q=Dott.+Marco+Ugolotti+Genova+fisioterapista" target="_blank" class="btn btn-outline">
+                    Visualizza su Google
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ================================ -->
+    <!-- CONTACT & LOCATION SECTION      -->
+    <!-- ** CRITICAL SECTION **          -->
+    <!-- Address, hours, accessibility   -->
+    <!-- How to reach: auto/metro/train  -->
+    <!-- Google Maps integrated          -->
+    <!-- Update opening hours here       -->
+    <!-- ================================ -->
     <section id="contatti">
         <div class="container">
             <div class="section-header">
                 <h2>Contatti e Posizione</h2>
-                <p class="section-subtitle">Prenota il tuo appuntamento</p>
+                <p class="section-subtitle">Facilmente raggiungibile dal centro di Genova</p>
             </div>
+            
+            <!-- Main Contact Info + Map -->
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Informazioni di Contatto</h3>
-                    
+                    <!-- Address -->
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div class="contact-details">
@@ -1164,6 +1629,7 @@ Demo dimostrativo di sito web realizzato come esempio.
                         </div>
                     </div>
 
+                    <!-- Phone -->
                     <div class="contact-item">
                         <div class="contact-icon">📞</div>
                         <div class="contact-details">
@@ -1172,24 +1638,29 @@ Demo dimostrativo di sito web realizzato come esempio.
                         </div>
                     </div>
 
+                    <!-- WhatsApp -->
                     <div class="contact-item">
                         <div class="contact-icon">💬</div>
                         <div class="contact-details">
                             <h4>WhatsApp</h4>
-                            <p><a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20avere%20informazioni%20su%20una%20visita.">Contattami su WhatsApp</a></p>
+                            <p><a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20prenotare%20una%20visita.">Contattami su WhatsApp</a></p>
                         </div>
                     </div>
 
+                    <!-- Opening Hours -->
                     <div class="contact-item">
                         <div class="contact-icon">🕐</div>
                         <div class="contact-details">
-                            <h4>Orari</h4>
-                            <p>Su appuntamento<br><em>Contattami per verificare la disponibilità</em></p>
+                            <h4>Orari di Ricevimento</h4>
+                            <p>Lunedì - Venerdì: 8:00 - 19:00<br>
+                            Sabato: 8:00 - 12:00<br>
+                            <em>Su appuntamento</em></p>
                         </div>
                     </div>
 
+                    <!-- CTA Buttons -->
                     <div class="contact-actions">
-                        <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20avere%20informazioni%20su%20una%20visita." class="btn btn-primary">
+                        <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20prenotare%20una%20visita." class="btn btn-primary">
                             <span>💬</span> Prenota su WhatsApp
                         </a>
                         <a href="tel:+393478145532" class="btn btn-secondary">
@@ -1198,6 +1669,7 @@ Demo dimostrativo di sito web realizzato come esempio.
                     </div>
                 </div>
 
+                <!-- Google Map -->
                 <div class="map-placeholder">
                     <iframe
                         src="https://www.google.com/maps?q=Via+Andrea+Doria+4/5+Genova&output=embed"
@@ -1209,10 +1681,192 @@ Demo dimostrativo di sito web realizzato come esempio.
                     </iframe>
                 </div>
             </div>
+
+            <!-- LOCATION & ACCESSIBILITY SECTION -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-color);">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Come Raggiungermi</h3>
+                
+                <div class="accessibility-grid">
+                    <!-- Carro -->
+                    <div class="accessibility-item">
+                        <h4>🚗 In Auto</h4>
+                        <p><strong>Parcheggio disponibile</strong></p>
+                        <p>Lo studio dispone di posti auto dedicati. La zona è ben servita da parcheggi pubblici e privati.</p>
+                    </div>
+
+                    <!-- Metro -->
+                    <div class="accessibility-item">
+                        <h4>🚇 Metro (Metropolitana)</h4>
+                        <p><strong>Linea A - Fermata Brin</strong></p>
+                        <p>A circa 10 minuti a piedi dalla stazione. Via Andrea Doria è nel cuore del centro storico.</p>
+                    </div>
+
+                    <!-- Train -->
+                    <div class="accessibility-item">
+                        <h4>🚂 Treno</h4>
+                        <p><strong>Stazione Genova Brignole</strong></p>
+                        <p>Gli orari di ricezione coincidono con gli orari ferroviari. Raggiungibile comodamente a piedi o in pochi minuti di metro.</p>
+                    </div>
+
+                    <!-- Bus -->
+                    <div class="accessibility-item">
+                        <h4>🚌 Autobus</h4>
+                        <p><strong>Linee AMT locali</strong></p>
+                        <p>Diverse linee di autobus passano per Via Andrea Doria. Consulta la mappa AMT per la linea più vicina.</p>
+                    </div>
+                </div>
+
+                <!-- Opening Hours Details -->
+                <div style="margin-top: 2.5rem; padding: 2rem; background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%); border-radius: 12px; text-align: center;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1.25rem;">📋 Orari Dettagliati</h4>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span class="hours-day">Lunedì - Venerdì:</span>
+                            <span class="hours-time">08:00 - 19:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="hours-day">Sabato:</span>
+                            <span class="hours-time">08:00 - 12:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="hours-day">Domenica:</span>
+                            <span class="hours-time">Chiuso</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--text-light);"><em>Orari su appuntamento. Contattami per verificare la disponibilità.</em></p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
+    <!-- ================================ -->
+    <!-- FAQ SECTION - ACCORDION         -->
+    <!-- ** NEW SECTION **               -->
+    <!-- This is a CSS/JS accordion      -->
+    <!-- Click questions to expand       -->
+    <!-- answers. Edit FAQ content       -->
+    <!-- below in the faq-answer divs    -->
+    <!-- ================================ -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Domande Frequenti (FAQ)</h2>
+                <p class="section-subtitle">Risposte alle domande più comuni sulla tecnica Strain Counterstrain</p>
+            </div>
+
+            <div class="faq-section">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Cos'è esattamente la tecnica Strain Counterstrain?</span>
+                        <span class="faq-toggle">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            È un approccio manuale osteopatico che agisce sul sistema nervoso. Invece di "forzare" un muscolo contratto, 
+                            lo portiamo in una posizione di massimo accorciamento e comfort per 90 secondi. Questo invia un segnale al 
+                            sistema nervoso per "resettare" il riflesso della contrazione, eliminando il dolore e la tensione in modo 
+                            immediato e naturale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Il trattamento è doloroso?</span>
+                        <span class="faq-toggle">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Assolutamente no. A differenza di molte tecniche di terapia manuale o manipolazioni vertebrali, lo Strain 
+                            Counterstrain viene eseguito sempre in assenza di dolore. È una tecnica passiva: il terapista muove il tuo 
+                            corpo verso una posizione di sollievo. È ideale anche per chi soffre di dolore acuto o infiammazioni forti.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Cosa significa la sigla JSCC dopo il nome?</span>
+                        <span class="faq-toggle">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            La sigla JSCC (Jones Strain Counterstrain Certified) indica una certificazione internazionale di alto livello 
+                            rilasciata dal Jones Institute. Certifica che il professionista ha completato un percorso di studi rigoroso e 
+                            ha superato esami specifici per padroneggiare questa metodica con la massima precisione clinica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Quante sedute sono necessarie?</span>
+                        <span class="faq-toggle">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Ogni paziente è unico, ma molti avvertono un miglioramento significativo già dopo la prima seduta. 
+                            In genere un ciclo di 3-5 trattamenti è sufficiente per risolvere disfunzioni croniche o acute, 
+                            a seconda della complessità del caso. Durante la valutazione iniziale, potrai avere una previsione 
+                            più precisa in base al tuo quadro clinico.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Quali problemi può trattare la tecnica Strain Counterstrain?</span>
+                        <span class="faq-toggle">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Lo Strain Counterstrain è efficace per dolori cronici, limitazioni del movimento, disfunzioni 
+                            neuromuscolari, problemi cervicali, dorsali, lombari, e problematiche articolari (spalla, ginocchio, 
+                            caviglia, ecc.). È particolarmente utile per pazienti che non rispondono bene ad altre terapie o che 
+                            soffrono di dolore acuto e infiammazione.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Come si svolge una seduta?</span>
+                        <span class="faq-toggle">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Iniziamo con una valutazione clinica per identificare i tender points (punti di tensione). 
+                            Poi ti posiziono in una posizione di massimo comfort dove il muscolo contratto si accorcia. 
+                            Manteniamo questa posizione per circa 90 secondi mentre il sistema nervoso resetta il riflesso 
+                            anomalo. Infine, ritorniamo lentamente alla posizione di riposo. La seduta è completamente indolore e rilassante.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ CTA -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    Hai ancora dubbi o domande specifiche?
+                </p>
+                <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20ho%20una%20domanda%20sulla%20tecnica%20Strain%20Counterstrain." class="btn btn-primary">
+                    <span>💬</span> Contattami su WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- FINAL CALL-TO-ACTION            -->
+    <!-- Gradient background + CTA       -->
+    <!-- Encourage to contact studio     -->
+    <!-- ================================ -->
     <section class="final-cta">
         <div class="container">
             <h2>Hai bisogno di informazioni o vuoi prenotare una visita?</h2>
@@ -1228,6 +1882,10 @@ Demo dimostrativo di sito web realizzato come esempio.
         </div>
     </section>
 
+    <!-- ================================ -->
+    <!-- FOOTER                          -->
+    <!-- Contact info, links, copyright  -->
+    <!-- ================================ -->
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1256,13 +1914,36 @@ Demo dimostrativo di sito web realizzato come esempio.
         </div>
     </footer>
 
+    <!-- ================================ -->
+    <!-- WHATSAPP FLOATING BUTTON        -->
+    <!-- Fixed position, always visible  -->
+    <!-- ================================ -->
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20avere%20informazioni%20su%20una%20visita." class="whatsapp-float" title="Contattami su WhatsApp">
         💬
     </a>
 
     <script>
-        // Smooth scroll for anchor links (if any navigation is added)
+        // ===== FAQ ACCORDION FUNCTIONALITY =====
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Close other FAQs when opening a new one (optional - remove if you want multiple open)
+        const faqButtons = document.querySelectorAll('.faq-question');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Uncomment below to close other FAQs when opening one
+                // faqButtons.forEach(otherButton => {
+                //     if (otherButton !== button) {
+                //         otherButton.parentElement.classList.remove('active');
+                //     }
+                // });
+            });
+        });
+
+        // ===== SMOOTH SCROLL for anchor links =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1276,7 +1957,7 @@ Demo dimostrativo di sito web realizzato come esempio.
             });
         });
 
-        // Add animation on scroll (optional enhancement)
+        // ===== SCROLL ANIMATIONS for elements =====
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1291,8 +1972,8 @@ Demo dimostrativo di sito web realizzato come esempio.
             });
         }, observerOptions);
 
-        // Observe service cards and other elements for fade-in effect
-        document.querySelectorAll('.service-card, .testimonial-card, .why-item').forEach(el => {
+        // Observe cards for fade-in animation on scroll
+        document.querySelectorAll('.service-card, .testimonial-card, .why-item, .technique-wrapper').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
