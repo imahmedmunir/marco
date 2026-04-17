@@ -995,6 +995,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+          position: relative;
         }
 
         .nav-logo {
@@ -1021,6 +1022,73 @@
         }
 
         .nav-links a:hover {
+          color: var(--accent-color);
+        }
+
+        /* Hamburger Menu Button */
+        .hamburger-btn {
+          display: none;
+          background: none;
+          border: none;
+          color: white;
+          font-size: 1.5rem;
+          cursor: pointer;
+          padding: 0.5rem;
+          flex-direction: column;
+          gap: 4px;
+          width: 30px;
+          height: 30px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .hamburger-btn span {
+          width: 24px;
+          height: 2.5px;
+          background: white;
+          display: block;
+          transition: all 0.3s ease;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: linear-gradient(to right, #2c3e50, #34495e);
+          flex-direction: column;
+          gap: 0;
+          padding: 1rem 0;
+          list-style: none;
+          display: none;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          z-index: 998;
+        }
+
+        .mobile-menu.active {
+          display: flex;
+        }
+
+        .mobile-menu li {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu li:last-child {
+          border-bottom: none;
+        }
+
+        .mobile-menu a {
+          display: block;
+          padding: 0.75rem 1.5rem;
+          text-decoration: none;
+          color: #ecf0f1;
+          font-size: 0.95rem;
+          transition: background 0.2s ease;
+        }
+
+        .mobile-menu a:hover {
+          background: rgba(255, 255, 255, 0.1);
           color: var(--accent-color);
         }
 
@@ -1184,6 +1252,11 @@
             /* Mobile Navigation */
             .nav-container {
                 padding: 8px 12px;
+                position: relative;
+            }
+
+            .hamburger-btn {
+                display: flex;
             }
 
             .nav-logo {
@@ -1196,6 +1269,7 @@
             }
 
             .nav-links {
+                display: none;
                 gap: 12px;
             }
 
@@ -1366,7 +1440,20 @@
     <nav class="main-nav">
       <div class="nav-container">
         <div class="nav-logo">Dott. Marco Ugolotti</div>
-        <ul class="nav-links">
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="#specialita">Specialità</a></li>
+          <li><a href="#chi-sono">Chi Sono</a></li>
+          <li><a href="#trattamenti">Trattamenti</a></li>
+          <li><a href="#recensioni">Recensioni</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+        <ul class="mobile-menu" id="mobileMenu">
           <li><a href="#specialita">Specialità</a></li>
           <li><a href="#chi-sono">Chi Sono</a></li>
           <li><a href="#trattamenti">Trattamenti</a></li>
@@ -2208,6 +2295,22 @@
     </a>
 
     <script>
+        // ===== HAMBURGER MENU FUNCTIONALITY =====
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
         // ===== FAQ ACCORDION FUNCTIONALITY =====
         function toggleFAQ(button) {
             const faqItem = button.parentElement;
