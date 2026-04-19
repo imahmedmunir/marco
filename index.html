@@ -1134,20 +1134,8 @@
           padding: 0;
         }
 
-        /* Primary Certification (first item) */
-        .curriculum-list li:first-child {
-          background: white;
-          padding: 18px 20px;
-          margin-bottom: 20px;
-          border-left: 4px solid var(--primary-color);
-          border-radius: 4px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-          font-weight: 500;
-          color: var(--primary-color);
-        }
-
-        /* Secondary Certifications */
-        .curriculum-list li:not(:first-child) {
+        /* All curriculum items consistent */
+        .curriculum-list li {
           padding: 12px 0 12px 28px;
           border-bottom: 1px solid #e8e8e8;
           position: relative;
@@ -1155,7 +1143,7 @@
           color: #2d3436;
         }
 
-        .curriculum-list li:not(:first-child):before {
+        .curriculum-list li:before {
           content: "✓";
           position: absolute;
           left: 0;
@@ -1488,7 +1476,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Dott. Marco Ugolotti, JSCC</h1>
-                    <p class="hero-subtitle">Fisioterapista a Genova</p>
+                    <p class="hero-subtitle">Fisioterapia e Medicina Manuale Osteopatica</p>
                     
                     <!-- Credibility Quick Summary -->
                     <div style="background: var(--light-bg); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid var(--accent-color);">
@@ -1528,105 +1516,8 @@
 
                 <!-- Hero Image -->
                 <div class="hero-image">
-                    <img src="main_profile.jpg" alt="Dott. Marco Ugolotti - Fisioterapista Genova">
+                    <img src="main.png" alt="Dott. Marco Ugolotti - Fisioterapista Genova">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================================ -->
-    <!-- PRIMARY TECHNIQUE SECTION       -->
-    <!-- STRAIN COUNTERSTRAIN (SCS)      -->
-    <!-- ** MAIN FOCUS OF THE WEBSITE ** -->
-    <!-- Positioned after hero for max   -->
-    <!-- visibility. Edit text in the    -->
-    <!-- .technique-content div          -->
-    <!-- ================================ -->
-    <section class="technique-section" id="specialita">
-        <div class="container">
-            <div class="section-header">
-                <h2>La Mia Specialità: Strain Counterstrain</h2>
-            </div>
-            
-            <div class="technique-wrapper">
-                <div class="technique-content">
-                    <span class="technique-badge">Certificazione Internazionale JSCC</span>
-                    
-                    <h2>Liberati dal dolore senza manipolazioni aggressive o dolorose</h2>
-                    
-                    <p>
-                        Se soffri di dolori che persistono nel tempo, rigidità o limitazioni nei movimenti, e i trattamenti provati finora non hanno dato risultati duraturi, è possibile che la causa non sia strutturale, ma neuromuscolare.
-                    </p>
-                    
-                    <p>
-                        La tecnica <strong>Strain Counterstrain (SCS)</strong> è il mio approccio principale: un metodo osteopatico manuale, delicato e completamente indolore che agisce direttamente sul sistema nervoso.
-                    </p>
-                    
-                    <p>
-                        Attraverso un posizionamento specifico del corpo in condizioni di massimo comfort, in circa <strong>90 secondi</strong> è possibile disattivare i "tender points" (punti di tensione) responsabili della disfunzione, permettendo al sistema nervoso di ristabilire un equilibrio naturale.
-                    </p>
-                    
-                    <p>
-                        Questo si traduce in una riduzione del dolore, un miglioramento della mobilità e una sensazione di sollievo senza manovre invasive o brusche.
-                    </p>
-                    
-                    <h3 style="font-size: 1.15rem; margin-top: 2rem; margin-bottom: 1rem;">Come Funziona:</h3>
-                    <ul class="technique-benefits">
-                        <li>Rilascio indolore dei tender points</li>
-                        <li>Resetta il riflesso neuromuscolare "bloccato"</li>
-                        <li>Ripristina la vascolarizzazione del tessuto</li>
-                        <li>Migliora la circolazione linfatica</li>
-                        <li>Miglioramenti percepibili già dalle prime sedute</li>
-                    </ul>
-                    
-                    <p style="margin-top: 2rem; font-style: italic; color: var(--primary-color);">
-                        Molti dolori cronici non sono causati da lesioni strutturali, ma da disfunzioni neuromuscolari. 
-                        Lo Strain Counterstrain aiuta a trattarle in modo naturale.
-                    </p>
-                    
-                    <div class="technique-cta">
-                        <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20saperne%20di%20più%20sulla%20tecnica%20Strain%20Counterstrain." class="btn btn-primary">
-                            <span>💬</span> Parla direttamente con me su WhatsApp
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Technique Image -->
-                <div class="technique-image">
-                    <img src="image.webp" alt="Tecnica Strain Counterstrain">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================================ -->
-    <!-- WHEN TO SEE PHYSIOTHERAPIST     -->
-    <!-- Lists common problems treatable -->
-    <!-- by Strain Counterstrain         -->
-    <!-- ================================ -->
-    <section class="quando-rivolgerti">
-        <div class="container">
-            <h2>Quando Rivolgerti al Fisioterapista</h2>
-            <p>
-                Se avverti uno di questi problemi, lo Strain Counterstrain potrebbe essere il trattamento che stai cercando:
-            </p>
-            
-            <ul>
-                <li>Dolore cronico alla schiena o cervicale</li>
-                <li>Problemi alla spalla, gomito, ginocchio</li>
-                <li>Dolori muscolari persistenti e tensioni</li>
-                <li>Limitazioni del movimento o rigidità articolare</li>
-                <li>Disfunzioni posturali e problemi infiammatori</li>
-            </ul>
-            
-            <p class="closing-text">
-                Una valutazione professionale può aiutarti a individuare la causa del problema e iniziare il percorso di recupero.
-            </p>
-            
-            <div class="cta-button">
-                <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20prenotare%20una%20valutazione." class="btn btn-primary">
-                    <span>💬</span> Prenota una Valutazione su WhatsApp
-                </a>
             </div>
         </div>
     </section>
@@ -1645,7 +1536,7 @@
             </div>
             <div class="about-wrapper">
                 <div class="about-image">
-                    <img src="image2.webp" alt="Dott. Marco Ugolotti - Fisioterapista">
+                    <img src="image2black.jpg" alt="Dott. Marco Ugolotti - Fisioterapista">
                 </div>
                 <div class="about-content">
                     <p>
@@ -1687,6 +1578,95 @@
     </section>
 
     <!-- ================================ -->
+    <!-- PRIMARY TECHNIQUE SECTION       -->
+    <!-- STRAIN COUNTERSTRAIN (SCS)      -->
+    <!-- ** MAIN FOCUS OF THE WEBSITE ** -->
+    <!-- Positioned after hero for max   -->
+    <!-- visibility. Edit text in the    -->
+    <!-- .technique-content div          -->
+    <!-- ================================ -->
+    <section class="technique-section" id="specialita">
+        <div class="container">
+            <div class="section-header">
+                <h2>La Mia Specialità: Strain Counterstrain</h2>
+            </div>
+            
+            <div class="technique-wrapper">
+                <div class="technique-content">
+                    <span class="technique-badge">Certificazione Internazionale JSCC</span>
+                    
+                    <h2>Liberati dal dolore senza manipolazioni aggressive o dolorose</h2>
+                    
+                    <p>
+                        Se soffri di dolori che persistono nel tempo, rigidità o limitazioni nei movimenti, e i trattamenti provati finora non hanno dato risultati duraturi, è possibile che la causa non sia strutturale, ma neuromuscolare.
+                    </p>
+                    
+                    <p>
+                        La tecnica <strong>Strain Counterstrain (SCS)</strong> è il mio approccio principale: un metodo osteopatico manuale, delicato e completamente indolore che agisce direttamente sul sistema nervoso.
+                    </p>
+                    
+                    <p>
+                        Attraverso un posizionamento specifico del corpo in condizioni di massimo comfort, in circa <strong>90 secondi</strong> è possibile disattivare i "tender points" (punti di tensione) indicatori della disfunzione, permettendo al sistema nervoso di ristabilire un equilibrio naturale.
+                    </p>
+                    
+                    <p>
+                        Questo si traduce in una riduzione del dolore, un miglioramento della mobilità e una sensazione di sollievo senza manovre invasive o brusche.
+                    </p>
+                    
+                    <h3 style="font-size: 1.15rem; margin-top: 2rem; margin-bottom: 1rem;">Come Funziona:</h3>
+                    <ul class="technique-benefits">
+                        <li>Rilascio indolore dei tender points</li>
+                        <li>Resetta il riflesso neuromuscolare "bloccato"</li>
+                        <li>Ripristina la vascolarizzazione del tessuto</li>
+                        <li>Migliora la circolazione linfatica</li>
+                        <li>Miglioramenti percepibili già dalle prime sedute</li>
+                    </ul>
+                    
+                    <p style="margin-top: 2rem; font-style: italic; color: var(--primary-color);">
+                        Molti dolori cronici non sono causati da lesioni strutturali, ma da disfunzioni neuromuscolari. 
+                        Lo Strain Counterstrain aiuta a trattarle in modo naturale.
+                    </p>
+                    
+
+                </div>
+                
+                <!-- Technique Image -->
+                <div class="technique-image">
+                    <img src="image.webp" alt="Tecnica Strain Counterstrain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- WHEN TO SEE PHYSIOTHERAPIST     -->
+    <!-- Lists common problems treatable -->
+    <!-- by Strain Counterstrain         -->
+    <!-- ================================ -->
+    <section class="quando-rivolgerti">
+        <div class="container">
+            <h2>Quando Rivolgerti al Fisioterapista</h2>
+            <p>
+                Se avverti uno di questi problemi, lo Strain Counterstrain potrebbe essere il trattamento che stai cercando:
+            </p>
+            
+            <ul>
+                <li>Dolore cronico alla schiena o cervicale</li>
+                <li>Problemi alla spalla, gomito, ginocchio</li>
+                <li>Dolori muscolari persistenti e tensioni</li>
+                <li>Limitazioni del movimento o rigidità articolare</li>
+                <li>Disfunzioni posturali e problemi infiammatori</li>
+            </ul>
+            
+            <p class="closing-text">
+                Una valutazione professionale può aiutarti a individuare la causa del problema e iniziare il percorso di recupero.
+            </p>
+            
+
+        </div>
+    </section>
+
+    <!-- ================================ -->
     <!-- CURRICULUM SECTION              -->
     <!-- Certifications & Education      -->
     <!-- ================================ -->
@@ -1694,6 +1674,7 @@
       <div class="container">
         <h2>Formazione e Certificazioni</h2>
         <ul class="curriculum-list">
+          <li>Laurea in Fisioterapia</li>
           <li>Certificazione Internazionale in Medicina Manuale Osteopatica Americana Strain Counterstrain</li>
           <li>Accademia Italiana di Manipolazioni Vertebrali</li>
           <li>Ipnomed – Professionista Sanitario abilitato alla Comunicazione Ipnotica</li>
@@ -1720,15 +1701,12 @@
             <div class="studio-gallery">
                 <div class="studio-photo">
                     <img src="image3.webp" alt="Sala trattamenti">
-                    <div class="studio-caption">Ambiente dedicato ai trattamenti manuali</div>
                 </div>
                 <div class="studio-photo">
                     <img src="image4.webp" alt="Area riabilitazione">
-                    <div class="studio-caption">Spazio per la valutazione e il recupero funzionale</div>
                 </div>
                 <div class="studio-photo">
-                    <img src="newimage.jpeg" alt="Ambiente accogliente">
-                    <div class="studio-caption">Studio accogliente e riservato</div>
+                    <img src="newimageR.jpeg" alt="Ambiente accogliente">
                 </div>
             </div>
         </div>
@@ -1762,7 +1740,7 @@
                 <div class="service-card">
                     <div class="service-icon">🦴</div>
                     <h3>Trattamenti Vertebrali</h3>
-                    <p>Per problematiche specifiche della colonna vertebrale quando necessario approfondimento meccanico.</p>
+                    <p>Trattamento delle problematiche meccaniche e disfunzionali legate alla Colonna Vertebrale</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏃</div>
@@ -1924,7 +1902,7 @@
                         </div>
                         <div class="contact-details">
                             <h4>Facebook</h4>
-                            <p><a href="https://www.facebook.com/dott.marco.ugolotti" target="_blank" rel="noopener noreferrer">Visita la nostra pagina</a></p>
+                            <p><a href="https://www.facebook.com/dott.marco.ugolotti" target="_blank" rel="noopener noreferrer">Visita la mia pagina</a></p>
                         </div>
                     </div>
 
@@ -2114,32 +2092,10 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 6 -->
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Come si svolge una seduta?</span>
-                        <span class="faq-toggle">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Iniziamo con una valutazione clinica per identificare i tender points (punti di tensione). 
-                            Poi ti posiziono in una posizione di massimo comfort dove il muscolo contratto si accorcia. 
-                            Manteniamo questa posizione per circa 90 secondi mentre il sistema nervoso resetta il riflesso 
-                            anomalo. Infine, ritorniamo lentamente alla posizione di riposo. La seduta è completamente indolore e rilassante.
-                        </p>
-                    </div>
-                </div>
+
             </div>
 
-            <!-- FAQ CTA -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-light);">
-                    Hai ancora dubbi o domande specifiche?
-                </p>
-                <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20ho%20una%20domanda%20sulla%20tecnica%20Strain%20Counterstrain." class="btn btn-primary">
-                    <span>💬</span> Contattami su WhatsApp
-                </a>
-            </div>
+
         </div>
     </section>
 
@@ -2202,14 +2158,7 @@
                     </div>
                 </div>
                 
-                <div style="text-align: center; background: white; padding: 2rem; border-radius: 12px; border: 2px solid var(--accent-color);">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-dark);">
-                        <strong>Pronto a iniziare il tuo percorso verso il sollievo dal dolore?</strong>
-                    </p>
-                    <a href="https://wa.me/393478145532?text=Buongiorno%20Dott.%20Ugolotti,%20vorrei%20prenotare%20la%20mia%20prima%20visita." class="btn btn-primary">
-                        <span>💬</span> Prenota la Tua Prima Visita
-                    </a>
-                </div>
+
             </div>
         </div>
     </section>
